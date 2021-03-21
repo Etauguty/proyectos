@@ -76,17 +76,19 @@ export default {
             this.beforeEditCache = todo.title
             todo.editing = true;
         },
-        //Método para 
+        //Método para no permitir tareas en blanco
         doneEdit(todo){
             if(todo.title.trim() == ''){
                 todo.title = this.beforeEditCache
             }
             todo.editing = false;
         },
+        //Método para no editar en caso de presionar escape
         cancelEdit(todo){
             todo.title = this.beforeEditCache;
             todo.editing = false;
         },
+        //Método para remover tarea
         removeTodo(index){
             this.todos.splice(index, 1)
         }
