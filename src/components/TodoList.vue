@@ -45,6 +45,7 @@ export default {
         }
     },
 
+    //Permite el autofocus 
     directives: {
         focus: {
             inserted: function (el) {
